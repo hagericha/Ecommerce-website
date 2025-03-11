@@ -1,0 +1,722 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+
+/* Header and Navigation */
+
+/* HEADER TOP CONTAINER */
+.header-top {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.header-top:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Logo: Floated left */
+.logo {
+  float: left;
+  margin-left: 10px;
+}
+.logo img {
+  display: block;
+  width: 100px;
+}
+
+/* Navigation: Floated left, next to logo */
+/* Navigation Container */
+.main-nav {
+  float: left;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+/* Center Navigation List */
+.nav-center {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Each Navigation Item */
+.nav-center li {
+  display: inline-block;
+  position: relative;
+  margin-right: 20px;
+}
+
+/* Navigation Links */
+.nav-center li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 10px;
+}
+
+/* Hidden Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  list-style: none;
+  padding: 10px 0;
+  z-index: 999;
+  min-width: 150px;
+}
+
+/* Dropdown Menu Items */
+.dropdown-menu li {
+  display: block;
+}
+.dropdown-menu li a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Hover Effect for Dropdown Items */
+.dropdown-menu li a:hover {
+  background-color: #eee;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+
+
+
+/* Search Bar: Floated left, next to navigation */
+.searchbar {
+  float: left;
+  margin: 35px 20px;
+  
+}
+.search-container {
+  width: 300px;  /* Adjust width as desired for a "fancy" compact search bar */
+  position: relative;
+}
+#search-input {
+  width: 70%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 0.9em;
+}
+.search-btn {
+  padding: 5px 8px;
+  border: none;
+  background-color: #c17c2c;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-left: 5px;
+}
+
+/* Header Icons: Floated right */
+.header-icons {
+  float: right;
+  margin-right: 20px;
+  margin-top: 30px;
+}
+.header-icons a {
+  margin-left: 10px;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+/* User Dropdown (if logged in) */
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+}
+.user-btn {
+  background: none;
+  border: none;
+  font-size: 1em;
+  color: #333;
+  cursor: pointer;
+}
+.user-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  list-style: none;
+  padding: 5px 0;
+  margin: 0;
+  z-index: 1000;
+  min-width: 140px;
+}
+.user-dropdown:hover .user-menu,
+.user-dropdown:focus-within .user-menu {
+  display: block;
+}
+.user-menu li a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  font-size: 1em;
+  color: #333;
+}
+.user-menu li a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Footer, main content, etc. remain as defined earlier */
+
+
+
+
+
+
+
+/* Hero Section */
+.hero-image {
+  height: 400px;
+  background: url('/static/images/hero.jpg') no-repeat;
+  background-size: cover;
+}
+
+.hero-image h3{
+  font-size: 2em;
+  text-align: right;
+  padding-top: 150px;
+  color: #cb9264;
+}
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* Products */
+.products h2{
+  text-align: center;
+  padding-top: 50px;
+}
+
+.product-grid{
+  width: 80%;
+  height: 600px;
+  margin:auto;
+  border: 1px solid #d1cbcb;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.product-card{
+  width: 200px;
+  height: 250px;
+  float:left;
+  border: 1px solid #d1cbcb;
+  margin: 20px;
+}
+
+.product-card img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-card div{
+  height: 20px;
+  overflow: clip;
+}
+
+.show-all {
+  text-align: center;
+  margin-top: 20px;
+  clear: both;
+}
+
+.show-all a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: large;
+}
+
+
+
+/* Footer */
+/* Footer Styling */
+footer {
+  background: url('../images/footer.jpeg') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.footer-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-social {
+  margin-bottom: 20px;
+}
+
+.footer-social a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.footer-social img {
+  width: 40px; /* Adjust size as needed */
+  height: auto;
+}
+
+.footer-links a {
+  color: #271b1b;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1em;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-container p{
+  margin: 15px 0;
+  color: black;
+}
+
+
+
+/*--------------------------------------------------------------------------------------------------*/
+/*product detail*/
+/* Container for the product detail page */
+.product-detail-container {
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  overflow: hidden; /* Clear floats */
+}
+
+/* Left Side: Product Image */
+.product-image {
+  float: left;
+  width: 40%;         /* Adjust as needed */
+  margin-right: 20px;  /* Space between image and info */
+}
+
+.product-image img {
+  width: 100%;
+  border: 1px solid #ccc;
+  display: block;
+}
+
+/* Right Side: Product Information */
+.product-info {
+  float: left;
+  width: 55%;         /* Adjust so total width fits within container */
+}
+
+.product-info h2 {
+  margin-top: 0;
+  font-size: 1.8em;
+}
+
+.price {
+  font-size: 1.5em;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Add to Cart Box */
+.add-to-cart-box {
+  margin: 20px 0;
+}
+
+.add-to-cart-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+/* Product Description */
+.description {
+  margin-top: 20px;
+  font-size: 1em;
+  color: #555;
+}
+
+
+
+
+
+
+
+/*--------------------------------------------------------------------------------------*/
+/*account styling*/
+.account-container{
+  width: 100%;
+  height: 600px;
+  background-color: rgb(230, 227, 227);
+  padding: 50px;
+}
+
+.account-sidebar{
+  float: left;
+  width: 300px;
+  height: 500px;
+  margin: 5px 5px 5px 280px;
+  border: 1px solid rgb(170, 167, 167);
+  background-color: white;
+}
+
+.account-header{
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.account-name {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.account-nav ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+.account-nav li {
+  margin-bottom: 10px;
+}
+
+.account-nav a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.account-nav a.active, .account-nav a:hover {
+  background-color: #ddd;
+}
+
+/* Logout Button */
+.account-logout {
+  margin-top: 300px;
+  margin-left: 10px;
+}
+
+.logout-btn {
+  display: inline-block;
+  padding: 5px;
+  text-decoration: none;
+  border: 1px solid rgb(98, 167, 98);
+  background-color: rgb(98, 167, 98);
+  color: white;
+  border-radius: 5px;
+}
+
+.account-content{
+  display: inline-block;
+  width: 600px;
+  height: 500px;
+  margin: 5px;
+  border: 1px solid rgb(170, 167, 167);
+  background-color: white;
+  overflow: auto;
+}
+
+/* Hide all sections by default */
+.account-section {
+  display: none;
+  padding: 12px;
+  width: 100%;
+}
+
+/* Display active section */
+.account-section.active {
+  display: block;
+}
+
+.account-section h2 {
+  margin-bottom: 30px;
+}
+
+.account-section input {
+  display: block;
+  padding: 5px;
+  width: 100%;
+}
+
+.account-section label{
+  margin-bottom: 20px;
+}
+
+.account-section button{
+background-color: rgb(98, 167, 98);
+border-color: rgb(98, 167, 98);
+color: #fff;
+padding: 5px;
+border-radius: 5px;
+margin-left: 250px;
+}
+
+.address-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.delete-address {
+  border: 1px solid red;
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------*/
+/*Register page*/
+.register-section{
+  width: 100%;
+  height: 600px;
+  padding: 40px;
+  background-color: rgb(230, 227, 227);
+}
+
+.register-section div{
+  width: 500px;
+  margin: auto;
+  border: 1px solid rgb(170, 167, 167);
+  background-color: white; 
+}
+
+.register-section h2{
+  padding: 10px;
+  text-align: center;
+}
+
+.register-section label {
+  padding-left: 150px;
+}
+
+.register-section input {
+  display: block;
+  width: 200px;
+  margin: 0px auto 20px auto; /* Auto centers the input horizontally */
+  padding: 5px;
+}
+
+.register-section button{
+  display: block;
+  margin: auto;
+  padding: 5px;
+  background-color: rgb(98, 167, 98);
+  border-color: rgb(98, 167, 98);
+  border-radius: 5px;
+}
+
+.register-section p{
+  padding: 50px;
+  text-align: center;
+}
+
+
+
+
+/*----------------------------------------------------------------------------*/
+/*Login page*/
+.login-section{
+  width: 100%;
+  height: 600px;
+  padding: 40px;
+  background-color: rgb(230, 227, 227);
+}
+
+.login-section div{
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  border: 1px solid rgb(170, 167, 167);
+  background-color: white; 
+  padding: 50px;
+}
+
+.login-section h2{
+  padding: 10px;
+  text-align: center;
+}
+
+.login-section label {
+  padding-left: 100px;
+}
+
+.login-section input {
+  display: block;
+  width: 200px;
+  margin: 0px auto 5px auto; /* Auto centers the input horizontally */
+  padding: 5px;
+}
+
+.login-section button{
+  display: block;
+  margin: auto;
+  padding: 5px;
+  background-color: rgb(98, 167, 98);
+  border-color: rgb(98, 167, 98);
+  border-radius: 5px;
+}
+
+.login-section p{
+  padding: 50px;
+  text-align: center;
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------------------------*/
+/*Cart*/
+/* Cart Section Container */
+.cart-section {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #f8f8f8;
+}
+
+/* Central Cart Box */
+.cart-box {
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+/* Each Cart Item Row */
+.cart-item {
+  overflow: hidden; /* Clears floats */
+  padding: 10px 0;
+}
+
+/* Left: Product Photo */
+.item-photo {
+  float: left;
+  width: 110px;
+  height: 110px;
+  margin-right: 20px;
+}
+
+.item-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid #ccc;
+}
+
+/* Center: Description & Quantity */
+.item-description {
+  float: left;
+  width: 300px;
+}
+
+.item-description h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+}
+
+/* Quantity Box */
+.quantity-box {
+  margin-top: 10px;
+}
+
+.quantity-box button {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-color: #ddd;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+.quantity-box .qty-input {
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid #ccc;
+  margin: -5px;
+}
+
+/* Right: Delete Button */
+.item-delete {
+  float: right; 
+}
+
+
+.item-delete .delete-btn {
+  text-decoration: none; 
+  color: black;
+}
+
+/* Separator between items */
+.item-separator {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 10px 0;
+}
+
+/* Cart Summary Section */
+.cart-summary {
+  clear: both;
+  padding: 10px;
+  text-align: right;
+  font-size: 1.2em;
+}
+
+.cart-summary p{
+  margin-bottom: 20px;
+}
+
+.order-btn {
+  text-decoration: none;
+  background-color: #c36e28;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+}

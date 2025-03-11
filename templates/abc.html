@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        header{
+            background-color: lightgray;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        #logo{
+            float:left;
+            
+        }
+        #nav{
+            float:right;
+        }
+        header::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        #img{
+            background-color: lightgray;
+            padding: 40px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        #intro{
+            background-color: lightgray;
+            padding: 40px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        #Box-container{
+            margin-bottom: 10px;
+            text-align: justify;
+            
+        }
+        #Box-container::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+        #Box{
+            height: 400px;
+            float: left;
+            width: 32%;
+            background-color: lightgray;
+            margin:10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="logo"> Logo</div>
+        <nav id="nav"> Navigation</nav>
+    </header>
+
+    <div id="img">
+        Banner
+    </div>
+
+    <div id="intro">
+        Intro text area
+    </div>
+
+    <div id="#Box-container">
+        <div id="Box">Box 1</div>
+        <div id="Box">Box 2</div>
+        <div id="Box">Box 3</div>
+    </div>
+    
+</body>
+</html>

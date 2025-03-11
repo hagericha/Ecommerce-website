@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Pottery Paradise{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+  <!-- Common Header -->
+  <header>
+    <div class="header-top">
+      <!-- Logo on Left -->
+      <div class="logo">
+        <img src="{{ url_for('static', filename='images/tender_touch.png') }}" alt="Logo">
+      </div>
+      
+      <!-- Navigation Row -->
+      <nav class="main-nav">
+        <ul class="nav-center">
+          <!-- Kitchen & Dining Dropdown -->
+          <li class="dropdown">
+            <a href="#">Kitchen & Dining</a>
+            <ul class="dropdown-menu">
+              <li><a href="/subcategory/1">Mugs & Cups</a></li>
+              <li><a href="/subcategory/2">Plates</a></li>
+              <li><a href="/subcategory/3">Bowls</a></li>
+              <li><a href="/subcategory/4">Teapots & Pitchers</a></li>
+            </ul>
+          </li>
+          <!-- Decor Dropdown -->
+          <li class="dropdown">
+            <a href="#">Decor</a>
+            <ul class="dropdown-menu">
+              <li><a href="/subcategory/5">Vases</a></li>
+              <li><a href="/subcategory/6">Candle Holders</a></li>
+              <li><a href="/subcategory/7">Sculptures</a></li>
+              <li><a href="/subcategory/8">Wall Art</a></li>
+            </ul>
+          </li>
+          <!-- Garden Dropdown -->
+          <li class="dropdown">
+            <a href="#">Garden</a>
+            <ul class="dropdown-menu">
+              <li><a href="/subcategory/9">Planters and pots</a></li>
+              <li><a href="/subcategory/11">Bird Baths & Feeders</a></li>
+              <li><a href="/subcategory/12">Outdoor Sculptures</a></li>
+            </ul>
+          </li>
+          <!-- Traditional & Cultural Dropdown -->
+          <li class="dropdown">
+            <a href="#">Traditional & Cultural</a>
+            <ul class="dropdown-menu">
+              <li><a href="/subcategory/13">Idon Sculptures</a></li>
+              <li><a href="/subcategory/14">Diya lamps</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      
+      <!-- Search Bar -->
+      <div class="searchbar">
+        <div class="search-container">
+          <form action="/search" method="get">
+            <input type="text" name="query" placeholder="Search..." id="search-input">
+            <button type="submit" class="search-btn">Search</button>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Header Icons: Cart and Login/User -->
+      <div class="header-icons">
+        <a href="/cart" class="cart" title="Cart">&#128722;</a>
+        {% if session.first_name %}
+          <div class="user-dropdown">
+            <button class="user-btn">
+              {{ session.first_name }}▼
+            </button>
+            <ul class="user-menu">
+              <li><a href="/account">My Account</a></li>
+              <li><a href="/logout">Logout</a></li>
+            </ul>
+          </div>
+        {% else %}
+          <a href="/login" class="login" title="Login">&#128100;</a>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Block -->
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <!-- Common Footer -->
+  <footer>
+    <div class="footer-container">
+      <!-- Footer content here -->
+      <div class="footer-social">
+        <a href="#" title="YouTube">
+          <img src="{{ url_for('static', filename='images/yt.png') }}" alt="YouTube">
+        </a>
+        <a href="#" title="Instagram">
+          <img src="{{ url_for('static', filename='images/insta.png') }}" alt="Instagram">
+        </a>
+        <a href="#" title="Facebook">
+          <img src="{{ url_for('static', filename='images/fb.png') }}" alt="Facebook">
+        </a>
+      </div>
+      <div class="footer-links">
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <p>&copy; 2025 Pottery Paradise. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+

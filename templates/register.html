@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}Page Title - Pottery Paradise{% endblock %}
+
+{% block content %}
+  <!-- Page-specific content goes here -->
+  <section class="register-section">
+    <div>
+    <h2>Create an Account</h2>
+    <form method="post">
+        <label for="first_name">First Name:</label>
+        <input type="text" name="first_name" required>
+        
+        <label for="last_name">Last Name:</label>
+        <input type="text" name="last_name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+        
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" name="confirm_password" required>
+        
+        <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="/login">Login</a></p>
+    </div>
+</section>
+{% endblock %}
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Register - Pottery Paradise</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Pottery Paradise</h1>
+    </header>
+    <section class="register-section">
+        <h2>Create an Account</h2>
+        <form method="post">
+            <label for="first_name">First Name:</label>
+            <input type="text" name="first_name" required>
+            
+            <label for="last_name">Last Name:</label>
+            <input type="text" name="last_name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" name="email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" name="password" required>
+            
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" name="confirm_password" required>
+            
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="/login">Login</a></p>
+    </section>
+</body>
+</html>
+-->
