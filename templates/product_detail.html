@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Page Title - detail Paradise{% endblock %}
+
+{% block content %}
+<!-- Main Content: Product Detail -->
+<section>
+  <div class="product-detail-container">
+    <!-- Left side: Product Image -->
+    <div class="product-image">
+      <img src="{{ url_for('static', filename='images/' ~ product.image) }}" alt="{{ product.name }}">
+    </div>
+    
+    <!-- Right side: Product Info -->
+    <div class="product-info">
+      <h2>{{ product.name }}</h2>
+      <p class="price">${{ product.price }}</p>
+
+      <!-- Add to Cart Box (just a placeholder for now) -->
+      <div class="add-to-cart-box">
+        <a href="/add_to_cart/{{ product.id }}" class="add-to-cart-btn">Add to Cart</a>
+      </div>
+
+      <!-- Product Description -->
+      <div class="description">
+        <h4>Description:</h4>
+        <p>{{ product.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

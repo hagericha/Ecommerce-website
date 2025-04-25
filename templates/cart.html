@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Your Cart - Pottery Paradise{% endblock %}
+
+{% block content %}
+<section class="cart-section" style="height: 600px;">
+  <h2>Your Cart</h2>
+  <div class="cart-box">
+    {% for product in products %}
+      <div class="cart-item">
+        <!-- Left: Product Photo -->
+        <div class="item-photo">
+          <a href="/product/{{ product.id }}">
+            <img src="{{ url_for('static', filename='images/' ~ product.image) }}" alt="{{ product.name }}">
+          </a>
+        </div>
+        <!-- Center: Product Description & Quantity -->
+        <div class="item-description">
+          <h3>{{ product.name }}</h3>
+          <p>Price: ${{ product.price }}</p>
+          <div class="quantity-box">
+            <button class="qty-decrease" data-product-id="{{ product.id }}">–</button>
+            <input type="text" class="qty-input" value="{{ product.quantity }}" readonly>
+            <button class="qty-increase" data-product-id="{{ product.id }}">+</button>
+          </div>
+        </div>
+        <!-- Right: Delete Button -->
+        <div class="item-delete">
+          <a href="/remove_from_cart/{{ product.id }}" class="delete-btn">X</a>
+        </div>
+      </div>
+      <hr class="item-separator">
+    {% endfor %}
+  </div>
+  <div class="cart-summary">
+    <p><strong>Total: ${{ total }}</strong></p>
+    <a href="#" class="order-btn">Place Order</a>
+  </div>
+</section>
+{% endblock %}
+

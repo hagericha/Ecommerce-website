@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Pottery Paradise{% endblock %}
+
+{% block content %}
+  <div class="hero-image">
+    <h3>Quality You Can Trust, Service You Can Rely On.</h3>
+  </div>
+  <!-- Products Section -->
+  <section class="products">
+    <h2>Our Collection</h2>
+    <div class="product-grid">
+      {% for product in products %}
+        <div class="product-card">
+          <a href="/product/{{ product.id }}">
+            <img src="{{ url_for('static', filename='images/' ~ product.image) }}" alt="{{ product.name }}">
+          </a>
+          <div>{{ product.name }}</div>
+          <p><b>${{ product.price }}</b></p>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="show-all">
+      <a href="/products">Show more</a>
+    </div>
+  </section>
+{% endblock %}

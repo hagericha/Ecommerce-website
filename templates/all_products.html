@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Page Title - all Paradise{% endblock %}
+
+{% block content %}
+<section class="products">
+  <h2>All Products</h2>
+  <div class="product-grid">
+    {% for product in products %}
+      <div class="product-card">
+        <a href="/product/{{ product.id }}">
+          <img src="{{ url_for('static', filename='images/' ~ product.image) }}" alt="{{ product.name }}">
+        </a>
+        <div>{{ product.name }}</div>
+        <p><b>${{ product.price }}</b></p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
+
+
