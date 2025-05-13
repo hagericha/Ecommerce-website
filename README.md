@@ -28,33 +28,30 @@ A dynamic e-commerce web application for browsing and purchasing handmade potter
 
 ## Project Structure
 
-pottery-paradise/
+```
+project/
 │
-├── app.py                # Main application with all routes
-├── requirements.txt      # List of Python dependencies
-├── .env                  # Environment variable(not pushed to GitHub)
-├── .gitignore            # Ignored files/folders (including venv/)
+├── static/
+│ ├── images/
+│ ├── style.css
+│ └── script.js
 │
-├── templates/            # HTML templates
-│   ├── base.html
-│   ├── index.html
-│   ├── product_detail.html
-│   ├── all_products.html
-│   ├── subcategory_products.html
-│   ├── login.html
-│   ├── register.html
-│   ├── search_results.html
-│   └── account.html
+├── templates/
+│ ├── base.html
+│ ├── index.html
+│ ├── login.html
+│ ├── register.html
+│ ├── cart.html
+│ ├── account.html
+│ ├── product_detail.html
+│ ├── search_results.html
+│ ├── all_products.html
+│ └── subcategory_products.html
 │
-├── static/               
-│   ├── css/
-│   │   └── style.css
-│   ├── js/
-│   │   └── script.js
-│   └── images/           
-│
-└── README.md             
-
+├── app.py
+├── requirements.txt
+└── README.md           
+```
 
 
 ## Installation
@@ -170,12 +167,25 @@ pottery-paradise/
 
 ## Screenshots
 
-- ![Home page ](static/Screenshot/home.png)
-- ![Display of all products](static/Screenshot/products.png)  
-- ![User accout](static/Screenshot/account.png)
-- ![Cart items](static/Screenshot/cart.png)
-- ![Product detail](static/Screenshot/product_detail.png)
-- ![Login page](static/Screenshot/login.png)
-- ![Register page](static/Screenshot/register.png)
+- Home page
+  ![Home page ](static/Screenshot/home.png)
+  
+- Display of all products
+  ![Display of all products](static/Screenshot/products.png)
+  
+- User account
+  ![User account](static/Screenshot/account.png)
+  
+- Cart items
+  ![Cart items](static/Screenshot/cart.png)
+  
+- Product detail
+  ![Product detail](static/Screenshot/product_detail.png)
+  
+- Login page
+  ![Login page](static/Screenshot/login.png)
+  
+- Register page
+  ![Register page](static/Screenshot/register.png)
 
 
