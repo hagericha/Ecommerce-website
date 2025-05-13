@@ -33,8 +33,9 @@ project/
 │
 ├── static/
 │ ├── images/
-│ ├── style.css
-│ └── script.js
+│ ├── css/
+| ├── js/
+│ └── Screenshot/
 │
 ├── templates/
 │ ├── base.html
