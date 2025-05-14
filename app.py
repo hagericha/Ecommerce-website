@@ -4,22 +4,21 @@ import mysql.connector
 # Create a Flask application instance
 app = Flask(__name__)
 
-app.secret_key = 'family'
+app.secret_key = ' ' # Here add secret key
 
 
 # Function to establish a connection to the MySQL database.
 def get_db_connection():
     connection = mysql.connector.connect(
         host='localhost',       # Your MySQL server address
-        user='root',            # Your MySQL username
-        password='Year2001#born',# Your MySQL password
+        user='',                # Your MySQL username
+        password='',            # Your MySQL password
         database='pottery_db'   # The database we created for our project
     )
     return connection
 
 @app.route('/')
 def index():
-    # Open a connection to the database
     conn = get_db_connection()
     cursor = conn.cursor(dictionary=True)
     
@@ -27,11 +26,9 @@ def index():
     cursor.execute("SELECT * FROM products ORDER BY RAND() LIMIT 12")
     products = cursor.fetchall()
     
-    # Close the cursor and connection
     cursor.close()
     conn.close()
-    
-    # Render the index.html template, passing the products data
+
     return render_template('index.html', products=products)
 
 
@@ -47,8 +44,7 @@ def product_detail(product_id):
     
     cursor.close()
     conn.close()
-    
-    # If no product is found, return a 404 or a custom message
+
     if not product:
         return "Product not found", 404
     
@@ -102,7 +98,7 @@ def login():
         cursor.close()
         conn.close()
         
-        # For simplicity, comparing plain text (use hashing in production)
+        # For simplicity, comparing plain text 
         if user and user['password'] == password:
             session['user_id'] = user['id']
             session['first_name'] = user['first_name']
