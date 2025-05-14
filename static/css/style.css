@@ -118,7 +118,7 @@ body {
   
 }
 .search-container {
-  width: 300px;  /* Adjust width as desired for a "fancy" compact search bar */
+  width: 300px;  
   position: relative;
 }
 #search-input {
@@ -191,11 +191,6 @@ body {
 .user-menu li a:hover {
   background-color: #f0f0f0;
 }
-
-/* Footer, main content, etc. remain as defined earlier */
-
-
-
 
 
 
@@ -343,7 +338,7 @@ footer {
 /* Right Side: Product Information */
 .product-info {
   float: left;
-  width: 55%;         /* Adjust so total width fits within container */
+  width: 55%;        
 }
 
 .product-info h2 {
@@ -377,9 +372,6 @@ footer {
   font-size: 1em;
   color: #555;
 }
-
-
-
 
 
 
@@ -588,7 +580,7 @@ margin-left: 250px;
 .login-section input {
   display: block;
   width: 200px;
-  margin: 0px auto 5px auto; /* Auto centers the input horizontally */
+  margin: 0px auto 5px auto; 
   padding: 5px;
 }
 
@@ -631,7 +623,7 @@ margin-left: 250px;
 
 /* Each Cart Item Row */
 .cart-item {
-  overflow: hidden; /* Clears floats */
+  overflow: hidden; 
   padding: 10px 0;
 }
 
